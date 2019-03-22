@@ -1,0 +1,219 @@
+
+body{
+    background:bisque;
+}
+#first-row{
+    width: 100%;
+  text-align: center;
+  
+  
+}
+.heading{
+    width: 100%;
+    text-align: center;
+}
+h1{
+    font-size: 60px;
+
+}
+#first-row-left{
+    float: left;
+    width: 300px;
+    margin: 0 0 0 300px;
+    padding: 2% 0;
+    
+}
+#first-row-right{
+    float: right;
+    width: 600px;
+    margin: 0 300px 0 0;
+    padding: 2% 0;  
+}
+#gifplace{
+    width: 95%;
+    margin: auto;
+    clear: both;
+    text-align: center
+}
+#gifTable{
+    width: 630px;
+    margin: 0 auto;
+    float:left;
+    margin-left: 300px; 
+}
+.gifimage{
+    width: 300px;
+}
+.ratingTD{
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+}
+#favTable{
+    width: 420px;
+    float: left;
+    margin: 0 auto 0 40px;
+}
+td{
+    padding:10px;
+    border: solid 1px black;
+}
+.imgTD{
+    width: 420px;
+}
+table{
+    border: solid 2px black;
+}
+button{
+    padding: 10px;
+    margin: 15px;
+    background:#008CBA;
+    color: antiquewhite;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    
+}
+button:hover{
+    background:antiquewhite;
+    color: #008CBA;
+}
+input#addCategory{
+    padding: 10px;
+    margin: 15px;
+    background:#008CBA;
+    color: antiquewhite;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+P{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 900;
+    font-size: 18px
+}
+td.fav{
+    vertical-align: middle;
+    text-align: center;
+    width: 110px;
+}
+button.favouriteGif{
+    margin: 0;
+    padding: 5px;
+}
+
+@media screen and (max-width: 1400px) {
+    
+    #first-row-left{
+        float: left;
+        width: 300px;
+        margin: 0 0 0 40px;
+        padding: 20px;
+        
+    }
+    #first-row-right{
+        float: right;
+        width: 600px;
+        margin: 0 40px 0 0;
+        padding: 20px 0;  
+    }
+    #favTable{
+        width: 420px;
+        float: left;
+        margin: 0 auto 0 40px;
+    }
+    #gifTable{
+        width: 630px;
+        margin: 0 auto;
+        float:left;
+        margin-left: 40px; 
+    }
+  }
+  
+@media screen and (max-width: 1200px) {
+    
+    #first-row-left{
+        float: left;
+        width: 300px;
+        margin: 0 0 0 30px;
+        padding: 20px;
+        
+    }
+    #first-row-right{
+        float: right;
+        width: 600px;
+        margin: 0 30px 0 0;
+        padding: 20px 0;  
+    }
+    #favTable{
+        width: 420px;
+        float: right;
+        margin-right:30px;
+    }
+    #gifTable{
+        width: 630px;
+        margin: 0 auto;
+        float:left;
+        margin-left: 30px; 
+    }
+  }
+  @media screen and (max-width: 700px) {
+  
+    #first-row-left{
+        display: block;
+        width: 100%;
+        margin: 0 0 0 0px;
+        padding: 20px;
+        text-align: center;
+        
+    }
+    h1{
+        font-size: 30px;
+    
+    }
+    #first-row-right{
+        display: block;
+        width: 100%;
+        margin: 0 0px 0 0;
+        padding: 20px 0;  
+    }
+    #gifTable{
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        display: block;
+         
+    }
+    #favTable{
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin: 0;
+       
+    }
+    .imgTD{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    td.fav{
+        
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    td.ratingTD{
+        width: 100%;
+        text-align: center;
+        
+        display: block;
+    }
+    .gifimage{
+        width: 100%;
+    }
+    td{
+        padding:10px 0;
+        border: solid 0px black;
+    }
+}

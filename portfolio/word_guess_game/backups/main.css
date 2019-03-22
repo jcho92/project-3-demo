@@ -1,0 +1,6 @@
+p#id{
+    visibility: visible;
+}
+p#play{
+    visibility: hidden;
+}

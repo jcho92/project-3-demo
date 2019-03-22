@@ -1,0 +1,547 @@
+body{
+    margin: 0px;
+    background-image: url("../images/Can-You-Beat-This-Game-Of-22Jeopardy22.jpg ");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+
+	background-color:#000;
+}
+
+#overlay{
+    background-color: rgba(0,0,0,0.5);
+    position:fixed;
+     left:0;
+     top: 0;
+     width:100%;
+     height:100%;
+     display: none;
+}
+.main{
+    background: rgba(0,0,0,0.5);
+    padding: 80px 0px 0px 0px;
+    left:0;
+    top: 0;
+}
+.about{
+    height: 300px;
+}
+.demo{
+    height: 900px;
+    width: 100%;
+}
+ul.nav-bar{
+    list-style-type: none;
+    margin: 0;
+    margin-left: auto;
+    margin-right:auto;
+    padding: 0;
+    overflow: hidden;
+    width: 960px;
+    font-family: 'Alfa Slab One', cursive;
+
+}
+li.header{
+    float:right;
+    padding: 22px 16px;
+    color: #fff;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+li.header:hover {
+    background-color:#fff;
+    color: #444444;
+}
+
+.header_name{
+    color:#fff;
+    text-decoration: none;
+}
+
+a.heading{
+    text-decoration: none;
+  
+}
+
+li.Name{
+    float:left;
+    padding: 18px 55px;
+    color: #ffffff;
+    background-color: #444444;
+    font-size: 24px;
+    font-weight: bold;
+}
+li.Name:hover{
+    background-color:#fff;
+    color: #444444;
+}
+div.header{
+    background-color: #444444; 
+    border-bottom: 1px solid #cccccc;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    margin: 0%;
+    top: 0;
+}
+p{
+    margin: 0px;
+    line-height: 25px;
+    font-family:'K2D', sans-serif;
+}
+span,{
+    font-family:'K2D', sans-serif;
+}
+h1,{
+    margin: 0px;
+    font-family: 'Alfa Slab One', cursive;
+}
+.displayname{
+    font-family: 'Alfa Slab One', cursive;
+    letter-spacing: 5px;
+}
+
+footer{
+    background-color:#333;
+    text-align: center;
+    width: 100%;
+    position:relative;
+    bottom:0;
+    padding: 20px 0;
+    margin: auto;
+    color: #fff;
+    border-top: #4aaaa5 5px solid;
+    clear: both;
+}
+
+
+div.body-intro{
+    background-image: url("../images/Play_WorldTour.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:#efefee;
+    padding-top:30px;
+    padding-bottom:30px;
+    margin-left: auto;
+    margin-right: auto;
+    border: #dddddd 2px solid; 
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: 5px;
+    height: 600px;
+    text-align: center;
+    
+    
+}
+div.body{
+    background-color:rgb(0, 0, 136);
+    padding-left: 30px;
+    padding-right:30px;
+    padding-top:30px;
+    padding-bottom:30px; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 30px;
+   
+    
+}
+div.innerbody{
+    background-color:rgb(0, 0, 136);
+    padding-left: 30px;
+    padding-right:30px;
+    padding-top:30px;
+    padding-bottom:30px;
+    width:900px; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    color: #ffd700
+   
+    
+}
+div.workingdemo{
+    background-color:rgb(0, 0, 136);
+    padding-left: 30px;
+    padding-right:30px;
+    padding-top:30px;
+    padding-bottom:30px;
+    width:900px; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    color: #ffd700
+   
+    
+}
+.git{
+    background-color: #444444;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+.gitA{
+    font-size:18px;
+    color: #0078ff;
+    margin: 0 25px;
+}
+.gitlink{
+        font-size: 30px;
+        color: #ffffff;
+        margin: 0 25px;
+}
+table.category {
+    width: 660px;
+    margin-left:auto;
+    margin-right:auto;
+}
+img.table:hover{
+    position: relative;
+    bottom:10px;
+
+}
+th{
+    margin: 0px 20px;;
+    position: relative;
+    top: 80px;
+}
+
+div.column{
+    display: inline-block;
+    width: 220px;
+    text-align: center;
+}
+span.cat-table{
+    position: relative;
+    top: 80px;
+    background-color: #dddddd;
+    padding: 10px 9px;
+    
+}
+.display-left{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 60px;
+    opacity: 0.9;
+    height: 50px;
+    border-radius: 55px;
+
+}
+.display-right{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    width: 60px;
+    opacity: 0.9;
+    height: 50px;
+    border-radius: 55px;
+    
+}
+.description{
+    margin-top:100px;
+    padding:50px 0px;
+}
+
+/* scrolling css*/
+.bounce-up{
+    opacity: 0;
+    -moz-transition: all 700ms ease-out;
+    -webkit-transition: all 700ms ease-out;
+    -o-transition: all 700ms ease-out;
+    transition: all 700ms ease-out;
+    -moz-transform: translate3d(0px, 200px, 0px);
+    -webkit-transform: translate3d(0px, 200px, 0px);
+    -o-transform: translate(0px, 200px);
+    -ms-transform: translate(0px, 200px);
+    transform: translate3d(0px, 200, 0px);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .bounce-up.in-view{
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+}
+.head-intro{
+    width: 600px;
+    margin:250px auto;
+    padding: 15px;
+    background:rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    color: #000;
+}
+.skillset{
+    text-align: center;
+    margin: 5px;
+    border: 1px black solid;
+    width: 100%;
+}
+
+.contact{
+    color: #000000;
+}
+.skill-mf span {
+    color: #ffffff;
+}
+
+.skill-mf .progress {
+    background-color: #cde1f8;
+    margin: .5rem 0 1.2rem 0;
+    border-radius: 0;
+    height: .7rem;
+}
+  
+.skill-mf .progress .progress-bar {
+    height: .7rem;
+    background-color: #0078ff;
+}
+.typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap;
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 1.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  .header-portfolio{
+      width: 480px;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 480px }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+  
+#get-started .feature-block {
+    background: #fff none repeat scroll 0 0;
+    padding: 30px 20px;
+    transition: all 0.3s ease-in-out 0s;
+  }
+    #get-started .feature-block {
+      margin-bottom: 30px;
+    }
+
+  
+  #get-started .feature-block:hover {
+    box-shadow: 0 0 35px rgba(0, 0, 0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  #get-started .feature-block h4 {
+    margin-bottom: 20px;
+  }
+  
+  #get-started .feature-block p {
+    margin-bottom: 20px;
+  }
+  
+  #get-started .feature-block a {
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.3s;
+  }
+  
+  #get-started .feature-block a:hover {
+    color: #71c55d;
+  }
+  #features .feature-block {
+    background: #fff none repeat scroll 0 0;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    transition: all 0.5s ease-in-out 0s;
+  }
+  
+  #features .feature-block:hover {
+    box-shadow: 0 0 35px rgba(0, 0, 0);
+    transition: all 0.5s ease-in-out 0s;
+  }
+  
+  #features .feature-block h4 {
+    margin-bottom: 20px;
+  }
+  
+  #features .feature-block p {
+    margin-bottom: 0;
+  }
+  .project-description{
+      font-size: 18px !important;
+      color: #ffffff;
+      margin:25px;
+  }
+  
+
+
+
+@media screen and (max-width: 980px) {
+    body {
+      background-color: #333;
+    }
+  
+    div.body{
+        background-color:#efefee;
+        width: 60%; 
+        border: #dddddd 2px solid; 
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 30px;
+    }    
+
+    ul.nav-bar{
+    list-style-type: none;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    width: 100%;
+    }
+    div.header {
+        background-color:#050505;
+        padding: 0 2% 0 2%;
+        border-bottom: 1px solid #cccccc;
+    }
+    div.footer{
+        background-color:#333;
+        text-align: center;
+        width: 100%;
+        position:relative;
+        bottom:0;
+        padding: 20px 0;
+        margin: auto;
+        color: #fff;
+        border-top: #4aaaa5 5px solid;
+        clear: both;
+    }
+}
+
+     @media screen and (max-width: 600px) { 
+   
+        div.body{
+            background-color:#efefee;
+            width: 100%; 
+            border: #dddddd 2px solid; 
+            margin-top: 0px;
+            margin-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0px;
+            
+        }    
+        div.body-intro{
+            height: 400px;
+        }
+    
+    
+        div.innerbody{
+            background-color:#efefee;
+            padding-left: 0px;
+            padding-right:0px;
+            padding-top:0px;
+            padding-bottom:30px;
+            width:90%; 
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0px;
+            margin-bottom: 30px; 
+            height: 100%;
+        }
+       
+       
+        ul.nav-bar{
+        list-style-type: none;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        text-align: center
+        
+        }
+
+        div.header {
+            background-color: #444444;
+            padding: 0;
+            border-bottom: 1px solid #cccccc;
+           
+        }
+        div.footer{
+            background-color:#333;
+            text-align: center;
+            width: 100%;
+            position:relative;
+            bottom:0;
+            padding: 20px 0;
+            margin: auto;
+            color: #fff;
+            border-top: #4aaaa5 5px solid;
+            clear: both;
+        }
+
+        
+    li.Name{
+        padding: 18px 0px;
+        color: #ffffff;
+        background-color: #050505;
+        font-size: 24px;
+        font-weight: bold;
+        float: none;
+        display: block;
+        width: 100%;
+    
+    }
+    li.header{
+        padding: 22px 16px;
+        color: #fff;
+        float: none;
+        display: inline-block;
+    }
+    .head-intro{
+        width: 100%;
+        margin: 90px auto;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 15px;
+        color: #000;
+    }
+    
+    .typewriter {
+        white-space: normal;
+       
+      }
+      .header-portfolio{
+          width:100%;
+      }
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: orange; }
+      }
+}

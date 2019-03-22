@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My html page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|K2D" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+    <div class="header">
+        <ul class="nav-bar">
+            <a class="header_name" href="../../index.html">
+                <li class="Name">(Chun) John Cho</li>
+            </a>
+            <a class="heading" href="../../index.htmls">
+                <li class="header">About</li>
+            </a>
+            <a class="heading" href="../../index.html#portfolio">
+                <li class="header">Portfolio</li>
+            </a>
+            <a class="heading" href="../../index.html#contact">
+                <li class="header">Contact</li>
+            </a>
+        </ul>
+    </div>
+
+    <div class="git">
+        <p class="gitlink">Github link</p>
+        <a class="gitA" href="https://github.com/jcho92/multiplayer-RPS">https://github.com/jcho92/multiplayer-RPS</a>
+        <p class="project-description">This online Rock, Paper Scissors game uses firebase to connect two users to play Rock Paper Scissors real time. </p>
+
+    </div>
+
+    <body>
+        <div id="header">
+            <div id="header-box">
+                <p id="status"></p>
+                <h2>players:</h2>
+                <p id="statusID"></p>
+                <button id="start" onclick="start()">press start to play</button>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="interface">
+                <div id="playerOneInterface">
+                    <div class="userinput">
+                        <p>Enter your name to start</p>
+                        <form>
+                            <input type="text" id="player1">
+                            <input type="submit" id="addUser1" value="submit">
+                        </form>
+                    </div>
+
+                    <div class="userinterface">
+                        <h2>Rock Paper scissors!</h2>
+                        <p id="p1choice"></p>
+                        <button id="rock" onclick="rock1()">rock</button>
+                        <button id="paper" onclick="paper1()">paper</button>
+                        <button id="siccors" onclick="scissors1()">scissors</button>
+                        <p id="p1chat"></p>
+                        <p id="p1message"></p>
+                        <form id="chatform1">
+                            <input type="text" id="chatuser1">
+                            <input type="submit" id="chatsubmit1" value="message">
+                        </form>
+                    </div>
+                </div>
+
+                <div id="playerTwoInterface">
+                    <div class="userinput">
+                        <p>Enter your name to start</p>
+                        <form>
+                            <input type="text" id="player2">
+                            <input type="submit" id="addUser2" value="submit">
+                        </form>
+                    </div>
+
+                    <div class="userinterface">
+                        <h2>Rock Paper scissors!</h2>
+                        <p id="p2choice"></p>
+                        <button id="rock" onclick="rock2()">rock</button>
+                        <button id="paper" onclick="paper2()">paper</button>
+                        <button id="siccors" onclick="scissors2();">scissors</button>
+                        <p id="p2chat"></p>
+
+                        <p id="p2message"></p>
+                        <form id="chatform2">
+                            <input type="text" id="chatuser2">
+                            <input type="submit" id="chatsubmit2" value="message">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="mutualdisplay">
+
+                <div>
+                    <h2 id="winner">Who won?</h2>
+                </div>
+                <p id="playernameone">player name </p><span id="p1wins"></span>
+                <p id="playernametwo">player name </p><span id="p2wins"></span>
+
+            </div>
+
+
+
+
+            <div class="reset">
+                <button onclick="remove()">reset</button>
+            </div>
+            <script src="main.js">
+
+            </script>
+    </body>
+
+
+</html>

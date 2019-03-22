@@ -1,0 +1,42 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+   
+    <style>
+    div{
+        border: 1px solid #ffffff;
+    }
+    
+    
+    </style>
+</head>
+<body>
+<div class="navigation" style="width:100%; height: 100px;"></div>
+<div class="container">
+    <div class ="row" style="display:block; text-align: center">
+<div class="main-content" style="height:400px; width: 300px; float: left;"></div>
+<div class="main-content" style="height:400px; width: 700px; display: inline-block; margin-left: auto; margin-right: auto;  "></div>
+<div class="main-content" style="height:400px; width: 300px; float: right;"><input class="buttonLetter" type="button" id="a" onclick="hideImage()" value="a">
+    <input class="buttonLetter" type="button" id="a" onclick=" doHide()" value="a"></div>
+<div class="footer" style="width:100%; height: 100px;"><img id="portrait" style="height: 150px; width: 200px; padding-top:10%; display: none;" src="https://thumbs.gfycat.com/SnoopyPoorAiredaleterrier-size_restricted.gif">
+</div>
+</div>
+</div>
+</body>
+</html>
+
+<script> function hideImage(){
+        //  5000 = 5 seconds
+        document.getElementById("portrait").style.display = "block" ;
+        setTimeout( 5000, doHide ) ;
+    }
+    
+    function doHide(){
+        document.getElementById( "portrait" ).style.display = "none" ;
+    }
+</script>

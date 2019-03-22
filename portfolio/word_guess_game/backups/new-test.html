@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mood generator</title>
+    <meta name="viewport" content="width= device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+</head>
+
+<body>
+
+
+
+    <p id="gameStart"> Press any key to start the game</p>
+    <p id="play">the game has started</p>
+    <p id="answer"></p>
+
+
+
+
+    <input type="button" value="a" onclick="playgame()">
+
+
+    <script src="main.js">
+
+        var listBrand = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+        function printBtn() {
+            for (var i = 0; i < listBrand.length; i++) {
+                var btn = document.createElement("button");
+                var t = document.createTextNode(listBrand[i]);
+                btn.appendChild(t);
+                document.body.appendChild(btn);
+            }
+        }
+        printBtn();
+    </script>
+</body>
+
+</html>

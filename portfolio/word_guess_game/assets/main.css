@@ -1,0 +1,126 @@
+
+@font-face {
+    font-family: 'Starcraft Normal';
+    font-style: normal;
+    font-weight: normal;
+    src: local('font/Starcraft Normal'), url('Starcraft Normal.woff') format('woff');
+    }
+#display{
+    letter-spacing: 25px;
+    font-size: 30px;
+}
+body{
+    background-color: #001428;
+}
+p{ 
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Starcraft Normal';
+    color: #C2DFF3;
+}
+div.thor{
+    float: right;
+    padding-right: 100px;
+}
+div.score{
+    float: left;
+   padding: 20px 0px 0px 80px;
+}
+
+div.buttons{
+    width: 900px;
+    text-align: center;
+    display: inline-block;
+    height: 120px;
+    margin: 0 auto;
+    
+}
+div.display-left{
+    float: left;
+    height: 120px;
+    
+}
+div.display-right{
+    float: right;
+    height: 120px;
+    
+}
+p.win-loss{
+    width: 200px;
+}
+div.function{
+    text-align: center;
+    padding-top: 30px;
+}
+div.gameinfo{
+    clear: both;
+}
+p.info{
+   width: 200px;
+   padding: 20px;
+   letter-spacing: 10px;
+   text-align: center;
+}
+p.live-display{
+    width: 200px;
+ }
+.hide {
+    opacity: 0;
+    transition: opacity 2s linear;
+    -webkit-transition: opacity 2s linear;
+    -moz-transition: opacity 2s linear;
+    -o-transition: opacity 2s linear;
+  }
+.show {
+    opacity: 1;
+    transition: opacity 2s linear;
+    -webkit-transition: opacity 2s linear;
+    -moz-transition: opacity 2s linear;
+    -o-transition: opacity 2s linear;
+      }
+  div{
+      border: 0px solid #000000;
+  }
+  div.container{
+      background: url('background.jpg');
+  }
+  
+input
+{
+    padding: 10px 15px;
+    margin: 8px;
+    background: #07457B;
+    border: 3px solid #07599A;
+    border-radius: 5px;
+    text-align: center; 
+    clear: both;
+    font-family: 'Starcraft Normal';
+    color: #C2DFF3;
+}
+input:disabled{
+    background: #0F0F24;
+    border: #0F0F24;
+    color: #22354D;
+
+}
+div#winPop{
+    text-align: center;
+    height: 500px;
+    width: 600px;
+    background: #07599A;
+    margin: auto;
+    }
+div#lossPop{
+        text-align: center;
+        height: 500px;
+        width: 600px;
+        background: #07599A;
+        margin: auto;
+        }
+div#popup{
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top:20%;
+    
+}

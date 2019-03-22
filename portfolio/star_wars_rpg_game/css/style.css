@@ -1,0 +1,86 @@
+
+#character{
+    text-align: center;
+}
+.character-image{
+    width: 200px;
+    align: center;
+    border:  solid 1px red;
+}
+.characters-card{
+    display: inline-block;
+    width: 25%;
+}
+.characterHealth{
+    color: #ffffff;
+    text-align: center;
+}
+.combat{
+    margin: 0 auto;
+    text-align: center;
+
+}
+#playerCharacter{
+    display: inline-block;
+    text-align: center;
+    margin-left: auto;
+    
+}
+#enemyCharacter{
+    display: inline-block;
+   text-align: center;
+   margin-right: auto;
+   
+}
+.fight{
+    text-align: center
+}
+p{
+    font-size: 30px;
+    color: #ffffff;
+}
+.displayname{
+    font-size: 20px;
+    color: #ffffff;
+}
+.button{
+    background: none;
+    width: 100px;
+    height: 100px;
+}
+.fire{
+    color: red;
+}
+.restart{
+    text-align:center;
+    padding-top:30px;
+    clear: both;
+}
+.reset{
+    font-size: 20px;
+}
+#restart{
+    width: 100px;
+    background: #000000;
+    border: red solid 2px;
+}
+.container{
+    
+    background-image: url('../assets/679341.jpg');
+    padding:50px 0px;
+}
+
+
+@media screen and (max-width:700px) {
+    .character-image{
+        width: 140px;
+        border:  solid 1px red;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .character-image{
+        width: 80px;
+        border:  solid 1px red;
+    }
+}

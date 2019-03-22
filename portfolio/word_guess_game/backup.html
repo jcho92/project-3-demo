@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mood generator</title>
+    <meta name="viewport" content="width= device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+</head>
+
+<body>
+
+
+
+    <p id="gameStart"> Press any key to start the game</p>
+    <p id="play">the game has started</p>
+    <p id="answer"></p>
+    <img src="ezgif-1-159c61a8c54a.gif">
+    <p id="display"></p>
+    <p id ="winCounter">wins:0</p>
+    <p id ="lossCounter">loss:0</p>
+    <p id ="wordsPlayed">Letters already played: </p>
+    <p id ="wrongLetters">wrong letters: </p>
+
+
+    <input class="buttonLetter" type="button" id="a" onclick="a()" value="a">
+
+    <input class="buttonLetter" type="button" id="b" onclick="b()" value="b">
+
+    <input class="buttonLetter" type="button" id="c" onclick="c()" value="c">
+
+    <input class="buttonLetter" type="button" id="d" onclick="d()" value="d">
+
+    <input class="buttonLetter" type="button" id="e" onclick="e()" value="e">
+
+    <input class="buttonLetter" type="button" id="f" onclick="f()" value="f">
+
+    <input class="buttonLetter" type="button" id="g" onclick="g()" value="g">
+
+    <input class="buttonLetter" type="button" id="h" onclick="h()" value="h">
+
+    <input class="buttonLetter" type="button" id="i" onclick="i1()" value="i">
+
+    <input class="buttonLetter" type="button" id="j" onclick="j()" value="j">
+
+    <input class="buttonLetter" type="button" id="k" onclick="k()" value="k">
+
+    <input class="buttonLetter" type="button" id="l" onclick="l()" value="l">
+
+    <input class="buttonLetter" type="button" id="m" onclick="m()" value="m">
+
+    <input class="buttonLetter" type="button" id="n" onclick="n()" value="n">
+
+    <input class="buttonLetter" type="button" id="o" onclick="o()" value="o">
+
+    <input class="buttonLetter" type="button" id="p" onclick="p()" value="p">
+
+    <input class="buttonLetter" type="button" id="q" onclick="q()" value="q">
+
+    <input class="buttonLetter" type="button" id="r" onclick="r()" value="r">
+
+    <input class="buttonLetter" type="button" id="s" onclick="s()" value="s">
+
+    <input class="buttonLetter" type="button" id="t" onclick="t()" value="t">
+
+    <input class="buttonLetter" type="button" id="u" onclick="u()" value="u">
+
+    <input class="buttonLetter" type="button" id="v" onclick="v()" value="v">
+
+    <input class="buttonLetter" type="button" id="w" onclick="w()" value="w">
+
+    <input class="buttonLetter" type="button" id="x" onclick="x()" value="x">
+
+    <input class="buttonLetter" type="button" id="y" onclick="y()" value="y">
+
+    <input class="buttonLetter" type="button" id="z" onclick="z()" value="z">
+
+    <input type="button" id="reset" onclick="reset()" value="reset">
+    <input type="button" id="start" onclick="start()" value="start">
+    <input type="button" id="start" onclick="toggleMusic()" value="toggle Music">
+
+
+
+    <script>
+
+        var winAudio = new Audio('Thor_Death00.mp3');
+        var livesTwo = new Audio('Thor_CriticalWhat02.mp3');
+        var startGame = new Audio('Thor_What08.mp3');
+        var livesFive = new Audio('Thor_CriticalWhat01.mp3');
+        var buttonHit = new Audio('UI_Button0.wav');
+        var dead = new Audio('Thor_Attack05.mp3');
+        var dead2 = new Audio('Thor_Pissed07.mp3');
+        var restartAudio = new Audio('Thor_Pissed11.mp3');
+        var twoAttempts = new Audio('Thor_Pissed04.mp3');
+        var fiveAttempts = new Audio('Thor_Repaired01.mp3');
+        var backgroundSong = new Audio('Starcraft 2 Terran Theme Music.mp3');
+
+        function start() {
+            document.getElementById('start').disabled = true;
+            startGame.play();
+        }
+
+        // list of variables that will be used. 
+        var wordList = ["marine", "hellbat", "medic", "helion", "thor", "battlecruiser", "marauder", "firebat", "raven", "wraith", "viking", "ghost", "reaper", "siegetank", "widowmine", "medivac", "liberator", "cyclone"];
+        var playWord = wordList[Math.floor(Math.random() * wordList.length)];
+        var myLength = playWord.length;
+        var answerArray = [];
+        var livesLeft = 10;
+        var wrongLetters = [];
+        var buttonClicked = [];
+        var correct = false;
+        var loss = 0;
+        var win = 0;
+
+        // this will generate the list dash array 
+        function generate(){
+        for (var gi = 0; gi < playWord.length; gi++) {
+            answerArray[gi] = "_";
+         document.getElementById("display").innerHTML = (answerArray.join(""));
+        }
+        }
+        document.getElementById("display").innerHTML = (answerArray.join(""));
+        console.log(answerArray.join(""));
+        console.log(playWord);
+        // each time a button is pressed it will run this function 
+        function test() {
+            var remainingLetters = playWord.length;
+
+            // this will compare the play with the new word that has been entered into the array buttonclicked, if buttonClicked matches and letter in playWord then this will return correct
+            for (var g = 0; g < playWord.length; g++) {
+                if (playWord[g] == buttonClicked[buttonClicked.length - 1]) {
+                    answerArray[g] = buttonClicked[buttonClicked.length - 1];
+                    remainingLetters--;
+                    var correct = true;
+                    console.log(correct);
+                    console.log("lives left " + livesLeft);
+                    console.log("wrongLetters: " + wrongLetters);
+                    console.log(remainingLetters)
+                    document.getElementById("display").innerHTML = (answerArray.join(""));
+                    console.log(buttonClicked[buttonClicked.length - 1])
+
+                }
+
+            }
+            // if the letter is not matching then this code will return false and var livesLeft will go down by 1    
+            if (correct != true) {
+                livesLeft--;
+                console.log("this does not exist");
+                console.log("lives left " + livesLeft);
+                wrongLetters.push(buttonClicked[buttonClicked.length - 1]);
+                document.getElementById("wrongLetters").innerHTML = "wrong letters: " +wrongLetters;
+            }
+            // if livesLeft hits 0 the game will end 
+            if (livesLeft == 0) {
+                dead.play();
+                alert("game Over")
+                loss++;
+                document.getElementById("winCounter").innerHTML = "Loss: " + win;
+                document.getElementById("lossCounter").innerHTML = "wins: " + loss;
+
+
+            }
+            // this will end the game once the player has successfully guessed the word
+            if (answerArray.join("") == playWord) {
+                console.log("you Win");
+                win++;
+                document.getElementById('winCounter').innerHTML = "wins: " + win;
+                document.getElementById('lossCounter').innerHTML= "loss: " + loss;
+                winAudio.play();
+            }
+            if ((livesLeft == 2) && (answerArray.join("") != playWord) ) {
+                livesTwo.play();
+            }
+            if ((livesLeft == 5) && (answerArray.join("")!= playWord) ) {
+                livesFive.play();
+            }
+            if ((buttonClicked.length == 2) && (answerArray.join("") != playWord) && (correct == true)) {
+                twoAttempts.play();
+            }
+            if ((buttonClicked.length == 5 ) && (answerArray.join("") != playWord)) {
+                fiveAttempts.play();
+            }
+
+        }
+        function print(){
+            document.getElementById("wordsPlayed").innerHTML ="Letters already played: " + buttonClicked;
+        }
+
+
+
+
+        // these are the button functions, they set the value of disable to true so that the user can not double a word
+        function a() {
+            buttonClicked.push("a");
+            console.log(buttonClicked);
+            document.getElementById('a').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function b() {
+            buttonClicked.push("b");
+            console.log(buttonClicked);
+            document.getElementById('b').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function c() {
+            buttonClicked.push("c");
+            console.log(buttonClicked);
+            document.getElementById('c').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function d() {
+            buttonClicked.push("d");
+            console.log(buttonClicked);
+            document.getElementById('d').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function e() {
+            buttonClicked.push("e");
+            console.log(buttonClicked);
+            document.getElementById('e').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function f() {
+            buttonClicked.push("f");
+            console.log(buttonClicked);
+            document.getElementById('f').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function g() {
+            buttonClicked.push("g");
+            console.log(buttonClicked);
+            document.getElementById('g').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function h() {
+            buttonClicked.push("h");
+            console.log(buttonClicked);
+            document.getElementById('h').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+
+        function j() {
+            buttonClicked.push("j");
+            console.log(buttonClicked);
+            document.getElementById('j').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function k() {
+            buttonClicked.push("k");
+            console.log(buttonClicked);
+            document.getElementById('k').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+
+        function l() {
+            buttonClicked.push("l");
+            console.log(buttonClicked);
+            document.getElementById('l').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+
+        function m() {
+            buttonClicked.push("m");
+            console.log(buttonClicked);
+            document.getElementById('m').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function m() {
+            buttonClicked.push("m");
+            console.log(buttonClicked);
+            document.getElementById('m').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function n() {
+            buttonClicked.push("n");
+            console.log(buttonClicked);
+            document.getElementById('n').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function o() {
+            buttonClicked.push("o");
+            console.log(buttonClicked);
+            document.getElementById('o').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function p() {
+            buttonClicked.push("p");
+            console.log(buttonClicked);
+            document.getElementById('p').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function q() {
+            buttonClicked.push("q");
+            console.log(buttonClicked);
+            document.getElementById('q').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function r() {
+            buttonClicked.push("r");
+            console.log(buttonClicked);
+            document.getElementById('r').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function s() {
+            buttonClicked.push("s");
+            console.log(buttonClicked);
+            document.getElementById('s').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function t() {
+            buttonClicked.push("t");
+            console.log(buttonClicked);
+            document.getElementById('t').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function u() {
+            buttonClicked.push("u");
+            console.log(buttonClicked);
+            document.getElementById('u').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function v() {
+            buttonClicked.push("v");
+            console.log(buttonClicked);
+            document.getElementById('v').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function w() {
+            buttonClicked.push("w");
+            console.log(buttonClicked);
+            document.getElementById('w').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function x() {
+            buttonClicked.push("x");
+            console.log(buttonClicked);
+            document.getElementById('x').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function y() {
+            buttonClicked.push("y");
+            console.log(buttonClicked);
+            document.getElementById('y').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function z() {
+            buttonClicked.push("z");
+            console.log(buttonClicked);
+            document.getElementById('z').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        function i1() {
+            buttonClicked.push("i");
+            console.log(buttonClicked);
+            document.getElementById('i').disabled = true;
+            buttonHit.play();
+            test();
+            print();
+        }
+        // reset function to set all the values back to their default state. 
+        function reset() {
+            document.getElementById('a').disabled = false;
+            document.getElementById('b').disabled = false;
+            document.getElementById('c').disabled = false;
+            document.getElementById('d').disabled = false;
+            document.getElementById('e').disabled = false;
+            document.getElementById('f').disabled = false;
+            document.getElementById('g').disabled = false;
+            document.getElementById('h').disabled = false;
+            document.getElementById('h').disabled = false;
+            document.getElementById('i').disabled = false;
+            document.getElementById('j').disabled = false;
+            document.getElementById('k').disabled = false;
+            document.getElementById('l').disabled = false;
+            document.getElementById('m').disabled = false;
+            document.getElementById('n').disabled = false;
+            document.getElementById('o').disabled = false;
+            document.getElementById('p').disabled = false;
+            document.getElementById('q').disabled = false;
+            document.getElementById('r').disabled = false;
+            document.getElementById('s').disabled = false;
+            document.getElementById('t').disabled = false;
+            document.getElementById('u').disabled = false;
+            document.getElementById('v').disabled = false;
+            document.getElementById('w').disabled = false;
+            document.getElementById('x').disabled = false;
+            document.getElementById('y').disabled = false;
+            document.getElementById('z').disabled = false;
+            buttonClicked = [];
+            playWord = wordList[Math.floor(Math.random() * wordList.length)];
+            console.log(buttonClicked);
+            answerArray = [];
+            livesLeft = 10;
+            wrongLetters = [];
+            buttonClicked = []
+            console.log(playWord);
+            document.getElementById("display").innerHTML = (answerArray.join(""));
+            restartAudio.play();
+            generate();
+            }
+        window.onload = function () {
+            backgroundSong.play();
+            backgroundSong.volume = 0.6;
+            backgroundSong.loop = true;
+            generate();
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

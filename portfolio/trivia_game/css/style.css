@@ -1,0 +1,109 @@
+
+body{
+    background: #278082;
+}
+#main{
+    text-align: center;
+    width: 100%;
+    display: none;
+    padding-top: 1px;
+    
+}
+#subMain{
+    width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    border: 2px solid  antiquewhite;
+    margin-top:10%;
+    background: #8bdee0;
+    border-radius: 30px;
+}
+#subStart{
+    width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    border: 2px solid  antiquewhite;
+    margin-top:10%;
+    background: #8bdee0;
+    border-radius: 30px;
+}
+#subFinished{
+    width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    border: 2px solid  antiquewhite;
+    margin-top:10%;
+    background: #8bdee0;
+    border-radius:30px;
+}
+#start{
+    text-align: center;
+    width: 100%;
+    padding-top:10px;
+}
+button{
+    padding: 10px;
+    margin: 15px;
+    background:#008CBA;
+    color: antiquewhite;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    
+}
+button:hover{
+    background: antiquewhite;
+    color: #008CBA
+}
+.answer{
+    font-size: 30px;
+    font-weight: bold;
+}
+#finished{
+    text-align:center;
+    width:100%;
+    display: none;
+}
+h2{
+    text-decoration: uppercase;
+}
+@media screen and (max-width: 800px){
+
+    #subMain{
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        border: 2px solid  antiquewhite;
+        margin-top:10%;
+        background: #8bdee0;
+        border-radius: 30px;
+    }
+    #subStart{
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        border: 2px solid  antiquewhite;
+        margin-top:10%;
+        background: #8bdee0;
+        border-radius: 30px;
+    }
+    #subFinished{
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        border: 2px solid  antiquewhite;
+        margin-top:10%;
+        background: #8bdee0;
+        border-radius:30px;
+    }
+    button{
+        padding: 10px;
+        margin: 15px auto;
+        background:#008CBA;
+        color: antiquewhite;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 10px;
+        display: block;
+    }
+}

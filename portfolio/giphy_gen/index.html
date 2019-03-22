@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My html page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|K2D" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+    <div class="header">
+        <ul class="nav-bar">
+            <a class="header_name" href="../../index.html">
+                <li class="Name">(Chun) John Cho</li>
+            </a>
+            <a class="heading" href="../../index.htmls">
+                <li class="header">About</li>
+            </a>
+            <a class="heading" href="../../index.html#portfolio">
+                <li class="header">Portfolio</li>
+            </a>
+            <a class="heading" href="../../index.html#contact">
+                <li class="header">Contact</li>
+            </a>
+        </ul>
+    </div>
+
+    <div class="git">
+        <p class="gitlink">Github link</p>
+        <a class="gitA" href="https://github.com/jcho92/giphy">https://github.com/jcho92/giphy</a>
+        <p class="project-description">The Giphy Generator utilizes the giphy api to query and fetch the Gifs you want. You can favourite the gifs you want to keep!</p>
+
+
+    </div>
+
+    <div class="container">
+        <div class="heading">
+            <h1>THIS IS A GIPHY GENERATOR!</h1>
+            <p>add your categories and we'll fetch the gif for you!</p>
+        </div>
+        <div id="first-row">
+            <div id="first-row-left">
+                <p>enter your own category here</p>
+                <form>
+                    <input id="categoryInput" type="text">
+                    <input id="addCategory" type="submit" value="submit">
+
+                </form>
+                <button id="clear" onclick="clearAll()">clear all</button>
+
+            </div>
+            <div id="first-row-right">
+                <p>click these buttons to generate your category gifs<p>
+                        <div id="button-list"> </div>
+            </div>
+        </div>
+        <div id="gifplace">
+
+            <table id="gifTable">
+
+            </table>
+            <Table id="favTable">
+                <tr>
+                    <th>your Favourite gifs</th>
+                </tr>
+
+            </Table>
+        </div>
+    </div>
+</body>
+
+<script src="js/main.js"> </script>
+
+
+</html>
